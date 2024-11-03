@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased;
+}
+
+::selection {
+  @apply bg-pink-500/30 text-white;
+}
+
+.rainbow-text {
+  @apply bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-blue-500 to-purple-500 text-transparent bg-clip-text;
+}
+
+.rainbow-border {
+  @apply border-4 border-transparent;
+  background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box,
+              linear-gradient(to right, #f87171, #facc15, #4ade80, #60a5fa, #c084fc) border-box;
+  --bg-color: transparent;
+}
+
+.rainbow-glow {
+  box-shadow: 0 0 20px rgba(248, 113, 113, 0.2),
+              0 0 40px rgba(250, 204, 21, 0.2),
+              0 0 60px rgba(74, 222, 128, 0.2),
+              0 0 80px rgba(96, 165, 250, 0.2),
+              0 0 100px rgba(192, 132, 252, 0.2);
+}
